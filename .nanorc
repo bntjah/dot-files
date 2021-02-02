@@ -1,2 +1,14 @@
-set linenumbers
+## Set Scrolling Smoother
+set smooth
+
+## Include Syntax for most common languages
 include /usr/share/nano/*
+
+## AutoIndent
+set autoindent
+
+## Autobackup Files
+set backup
+
+## Remove Space Below Title Bar
+set morespace
