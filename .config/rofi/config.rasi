@@ -1,0 +1,3 @@
+configuration {
+	theme: "/home/gvw/.config/rofi/themes/nord-center.rasi";
+}
