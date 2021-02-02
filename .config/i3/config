@@ -51,7 +51,8 @@ bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Q kill
@@ -124,7 +125,7 @@ set $ws4 "4: MAIL"
 set $ws5 "5: Mobile-Chat"
 set $ws6 "6: VLC"
 set $ws7 "7: Discord"
-set $ws8 "8: Other"
+set $ws8 "8: VMs"
 set $ws9 "9: Other #2"
 set $ws10 "10: Cheatsheet"
 
@@ -206,9 +207,11 @@ for_window [class="Spotify"] move to workspace $ws4
 for_window [class="TelegramDesktop"] move to workspace $ws5
 for_window [class="discord"] move to workspace $ws7
 for_window [class="Conky"] move to workspace $ws10
-for_window [class="*Nautilus*"] move to workspace $ws8
+for_window [class="*Nautilus*"] move to workspace $ws9
 for_window [class="Eog"] move to workspace $ws9
-#for_window [class="^.*"] move to workspace $ws8
+for_window [class="urxvt"] move to workspace $ws1
+for_window [class="VirtualBox*"] move to workspace $ws9
+for_window [class="Remote-viewer"] move to workspace $ws9
 
 ## Switch Workspaces
 bindsym $mod+Tab workspace next
